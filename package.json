@@ -1,10 +1,11 @@
 {
-  "name": "w1-text-analyzer",
+  "name": "text-analyzer",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "serve public",
-    "build": "tsc"
+    "build": "tsc",
+    "build:dev": "tsc --watch"
   },
   "keywords": [],
   "author": "",
