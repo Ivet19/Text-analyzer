@@ -1,3 +1,5 @@
+import { getParagraphsTotal } from "../Analytics/index.js";
+
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");
 const palindromesContainer = document.querySelector(".palindromes");
@@ -116,9 +118,7 @@ const listenFrequenciesChanges = (text: string): void => {
 };
 
 export const analyzeText = (text: string): void => {
-  // Keep this two calls
   listenFrequenciesChanges(text);
   listenForbiddenWordsChanges(text);
-
-  // Implement the rest of the analysis here
+  renderParagraphsTotal(getParagraphsTotal(text));
 };
