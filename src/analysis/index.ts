@@ -65,17 +65,19 @@ export const getWordsList = (words: string[]): string => {
 };
 
 export const getWordFrequency = (text: string, word: string): number => {
-  const trimmedText = text.replaceAll("\n", " ");
-
+  const trimmedText = text.toLowerCase().replaceAll("\n", " ");
+  const lowerCaseWord = word.toLowerCase();
   const unfilteredWords = trimmedText.split(" ");
-
+  console.log(unfilteredWords);
   const filteredWords = unfilteredWords.filter(
     (filteredWord) =>
       word !== "" &&
       filteredWord !== " " &&
       filteredWord !== "\n" &&
-      filteredWord === word
+      filteredWord === lowerCaseWord
   );
+
+  console.log(filteredWords);
 
   const wordFrequency = filteredWords.length;
 
