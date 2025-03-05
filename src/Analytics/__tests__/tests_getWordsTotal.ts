@@ -83,3 +83,5 @@ const test6 = (): void => {
 };
 
 test6();
+
+//AÑADIR CARACTERES QUE NO SON PALABRAS (, . ; ...)
