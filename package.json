@@ -6,7 +6,7 @@
     "start": "serve public",
     "build": "tsc",
     "build:dev": "tsc --watch",
-    "test": "node public/js/Analytics/__tests__/tests_getWordsTotal.js"
+    "test": "node public/js/analysis/__tests__/getWordsTotal.js"
   },
   "keywords": [],
   "author": "",

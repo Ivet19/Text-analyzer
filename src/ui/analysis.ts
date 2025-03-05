@@ -1,4 +1,4 @@
-import { getParagraphsTotal, getWordsTotal } from "../Analytics/index.js";
+import { getParagraphsTotal, getWordsTotal } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");
