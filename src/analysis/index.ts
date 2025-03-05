@@ -58,7 +58,26 @@ export const getWordsList = (words: string[]): string => {
   const filteredWords = words.filter(
     (word) => word !== "" && word !== " " && word !== "\n"
   );
-  console.log(filteredWords);
+
   const wordsList = filteredWords.join(", ");
+
   return wordsList;
+};
+
+export const getWordFrequency = (text: string, word: string): number => {
+  const trimmedText = text.replaceAll("\n", " ");
+
+  const unfilteredWords = trimmedText.split(" ");
+
+  const filteredWords = unfilteredWords.filter(
+    (filteredWord) =>
+      word !== "" &&
+      filteredWord !== " " &&
+      filteredWord !== "\n" &&
+      filteredWord === word
+  );
+
+  const wordFrequency = filteredWords.length;
+
+  return wordFrequency;
 };
