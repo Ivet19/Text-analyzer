@@ -53,3 +53,12 @@ export const getShortWordsTotal = (
 
   return shortWords.length;
 };
+
+export const getWordsList = (words: string[]): string => {
+  const filteredWords = words.filter(
+    (word) => word !== "" && word !== " " && word !== "\n"
+  );
+  console.log(filteredWords);
+  const wordsList = filteredWords.join(", ");
+  return wordsList;
+};
