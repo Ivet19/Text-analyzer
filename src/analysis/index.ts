@@ -19,3 +19,17 @@ export const getWordsTotal = (text: string): number => {
 
   return words.length;
 };
+
+export const getCharactersTotal = (text: string): number => {
+  const trimmedText = text.replaceAll("\n", " ");
+
+  const unfilteredCharacters = trimmedText.split("");
+
+  console.log(unfilteredCharacters);
+
+  const characters = unfilteredCharacters.filter(
+    (unfilteredCharacter) => unfilteredCharacter !== " "
+  );
+
+  return characters.length;
+};
