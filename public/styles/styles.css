@@ -10,6 +10,10 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+header {
+  text-decoration: underline;
+}
+
 textarea,
 input,
 button {
@@ -85,6 +89,9 @@ h2 {
   border: 2px solid #333;
   background-color: beige;
   margin-bottom: 20px;
+  h2 {
+    font-size: 18px;
+  }
 }
 
 ul {
