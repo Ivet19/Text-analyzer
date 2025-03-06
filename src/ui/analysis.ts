@@ -7,6 +7,7 @@ import {
   getWordFrequency,
   getReversedWordsText,
   hideForbiddenWords,
+  getCamelCase,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -99,7 +100,6 @@ const listenForbiddenWordsChanges = (text: string): void => {
   forbiddenContainer
     .querySelector("input")!
     .addEventListener("input", (event) => {
-      // The variable forbiddenWords contains the words entered by the user in the input, already splitted
       const forbiddenWords = (event.target as HTMLInputElement).value.split(
         /,\s*/
       );
@@ -133,4 +133,5 @@ export const analyzeText = (text: string): void => {
   renderShortWordsTotal(getShortWordsTotal(text));
   renderShortWordsList(getWordsList(text.split(" ")));
   renderReversedText(getReversedWordsText(text));
+  renderCamelCase(getCamelCase(text));
 };

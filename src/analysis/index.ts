@@ -113,15 +113,15 @@ export const hideForbiddenWords = (
 };
 
 export const getCamelCase = (text: string): string => {
-  const words = text.split(" ");
+  const words = text.split(" ").map((word) => word.toLowerCase());
 
-  const slicedWord = words.shift()?.toLowerCase();
+  const firstWord = words.shift();
 
   const upperCaseInitialsText = words
-    .map((word) => word[0].toUpperCase() + words.slice(0))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("");
 
-  const camelCaseWord = slicedWord + upperCaseInitialsText;
+  const camelCaseWord = firstWord + upperCaseInitialsText;
 
   return camelCaseWord;
 };
