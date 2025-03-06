@@ -92,3 +92,22 @@ export const getReversedWordsText = (text: string): string => {
 
   return reversedWordsText;
 };
+
+export const hideForbiddenWords = (
+  text: string,
+  forbiddenWords: string[]
+): string => {
+  const words = text.split(" ");
+
+  const replacedWords = words.map((word) => {
+    if (forbiddenWords.some((forbiddenWord) => forbiddenWord === word)) {
+      return (word = "*");
+    } else {
+      return word;
+    }
+  });
+
+  const hiddenForbiddenWords = replacedWords.join(" ");
+
+  return hiddenForbiddenWords;
+};
