@@ -87,9 +87,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+ul {
+  padding: 0px;
+}
+
 .frequencies-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   input {
     width: 110px;
