@@ -5,6 +5,7 @@ import {
   getWordsTotal,
   getWordsList,
   getWordFrequency,
+  getReversedWordsText,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -130,4 +131,5 @@ export const analyzeText = (text: string): void => {
   renderCharactersTotal(getCharactersTotal(text));
   renderShortWordsTotal(getShortWordsTotal(text));
   renderShortWordsList(getWordsList(text.split(" ")));
+  renderReversedText(getReversedWordsText(text));
 };
