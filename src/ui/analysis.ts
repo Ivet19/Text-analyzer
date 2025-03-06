@@ -6,6 +6,7 @@ import {
   getWordsList,
   getWordFrequency,
   getReversedWordsText,
+  hideForbiddenWords,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -103,7 +104,7 @@ const listenForbiddenWordsChanges = (text: string): void => {
         /,\s*/
       );
 
-      // Render the forbidden words
+      renderForbiddenWords(hideForbiddenWords(text, forbiddenWords));
     });
 };
 
