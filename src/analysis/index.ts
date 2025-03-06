@@ -83,3 +83,12 @@ export const getWordFrequency = (text: string, word: string): number => {
 
   return wordFrequency;
 };
+
+export const getReversedWordsText = (text: string): string => {
+  const reversedWordsText = text
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+
+  return reversedWordsText;
+};

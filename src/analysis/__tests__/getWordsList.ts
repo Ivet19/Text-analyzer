@@ -9,7 +9,8 @@ const test1 = (): void => {
 
   const expectedList = "Hola";
   const actualList = getWordsList(wordsList);
-  console.log(`\nExpected result: 0 | Actual result: ${actualList}`);
+
+  console.log(`\nExpected result: "Hola" | Actual result: ${actualList}`);
 
   if (expectedList === actualList) {
     console.log("Test passed ✅");
@@ -41,11 +42,11 @@ const test2 = (): void => {
 test2();
 
 const test3 = (): void => {
-  const wordsList: string[] = ["manzanas", "leche", "arroz", "zumo"];
+  const wordsList: string[] = ["manzanas", "leche", "arroz", "\n"];
 
   console.log(`\n\nTest 3: [${wordsList}]`);
 
-  const expectedList = "manzanas, leche, arroz, zumo";
+  const expectedList = "manzanas, leche, arroz";
   const actualList = getWordsList(wordsList);
   console.log(
     `\nExpected result: ${expectedList} | Actual result: ${actualList}`
