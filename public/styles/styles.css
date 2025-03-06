@@ -16,6 +16,10 @@ button {
   font: inherit;
 }
 
+textarea {
+  padding: 20px;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -80,6 +84,7 @@ h2 {
   padding: 10px;
   border: 2px solid #333;
   background-color: beige;
+  margin-bottom: 20px;
 }
 
 .frequencies-list {
