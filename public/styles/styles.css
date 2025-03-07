@@ -35,6 +35,11 @@ input {
 
 a {
   color: inherit;
+  padding-bottom: 10px;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 h2 {
