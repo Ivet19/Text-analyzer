@@ -49,6 +49,11 @@ h2 {
   height: 40px;
   align-self: self-end;
   border: 1px solid black;
+
+  &:hover {
+    background-color: transparent;
+    color: #222;
+  }
 }
 
 button:hover {
