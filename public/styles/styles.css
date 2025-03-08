@@ -40,11 +40,6 @@ button {
   font: inherit;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-}
-
 input {
   padding: 5px;
 }
@@ -61,13 +56,18 @@ h2 {
   margin-top: 0;
 }
 
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
 .button {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
   width: 100px;
   height: 40px;
-  align-self: self-end;
   border: 1px solid black;
 
   &:hover {
