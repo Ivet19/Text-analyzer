@@ -25,8 +25,6 @@ export const getCharactersTotal = (text: string): number => {
 
   const unfilteredCharacters = trimmedText.split("");
 
-  console.log(unfilteredCharacters);
-
   const characters = unfilteredCharacters.filter(
     (unfilteredCharacter) => unfilteredCharacter !== " "
   );
@@ -49,8 +47,6 @@ export const getShortWordsTotal = (
       unfilteredShortWord.length <= maximumLength
   );
 
-  console.log(shortWords);
-
   return shortWords.length;
 };
 
@@ -68,7 +64,7 @@ export const getWordFrequency = (text: string, word: string): number => {
   const trimmedText = text.toLowerCase().replaceAll("\n", " ");
   const lowerCaseWord = word.toLowerCase();
   const unfilteredWords = trimmedText.split(" ");
-  console.log(unfilteredWords);
+
   const filteredWords = unfilteredWords.filter(
     (filteredWord) =>
       word !== "" &&
@@ -76,8 +72,6 @@ export const getWordFrequency = (text: string, word: string): number => {
       filteredWord !== "\n" &&
       filteredWord === lowerCaseWord
   );
-
-  console.log(filteredWords);
 
   const wordFrequency = filteredWords.length;
 
