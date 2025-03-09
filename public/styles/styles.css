@@ -118,10 +118,6 @@ button:hover {
 .analysis {
   display: none;
   flex-direction: column;
-
-  &.show {
-    display: flex;
-  }
 }
 
 .analysis__item {
@@ -130,10 +126,19 @@ button:hover {
   background-color: rgb(242, 209, 248);
   margin-bottom: 20px;
   border-radius: 20px;
+  visibility: hidden;
 
   h2 {
     font-size: 18px;
   }
+}
+
+.show_inside {
+  visibility: visible;
+}
+
+.show {
+  display: flex;
 }
 
 ul {
