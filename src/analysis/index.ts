@@ -36,7 +36,9 @@ export const getShortWordsTotal = (
   text: string,
   maximumLength: number = 4
 ): number => {
-  const trimmedText = text.replaceAll("\n", " ");
+  const trimmedText = text
+    .replaceAll("\n", " ")
+    .replaceAll(/[.,;:!?¿!*-]/g, "");
 
   const unfilteredShortWords = trimmedText.split(" ");
 
