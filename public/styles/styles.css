@@ -157,9 +157,7 @@ ul {
   }
 }
 
-.camel-case-text,
-.kebab-case-text,
-.snake-case-text {
+.camel-case-text {
   word-wrap: break-word;
 }
 
