@@ -3,7 +3,7 @@ import {
   getParagraphsTotal,
   getShortWordsTotal,
   getWordsTotal,
-  getWordsList,
+  getShortWordsList,
   getWordFrequency,
   getReversedWordsText,
   hideForbiddenWords,
@@ -104,7 +104,7 @@ export const analyzeText = (text: string): void => {
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
   renderShortWordsTotal(getShortWordsTotal(text));
-  renderShortWordsList(getWordsList(text.split(" ")));
+  renderShortWordsList(getShortWordsList(text.split(" ")));
   renderReversedText(getReversedWordsText(text));
   renderCamelCase(getCamelCase(text));
 };

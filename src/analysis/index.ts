@@ -50,12 +50,20 @@ export const getShortWordsTotal = (
   return shortWords.length;
 };
 
-export const getWordsList = (words: string[]): string => {
+export const getShortWordsList = (words: string[]): string => {
   const filteredWords = words.filter(
     (word) => word !== "" && word !== " " && word !== "\n"
   );
 
-  const wordsList = filteredWords.join(", ");
+  const shortWords: string[] = [];
+  filteredWords.forEach((word) => {
+    if (word.length <= 4) {
+      word.replaceAll(/[.,;:!?¿!*-]/g, "");
+      shortWords.push(word);
+    }
+  });
+
+  const wordsList = shortWords.join(", ");
 
   return wordsList;
 };
